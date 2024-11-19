@@ -6,13 +6,13 @@
 #    By: kbrener- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/28 14:04:45 by kbrener-          #+#    #+#              #
-#    Updated: 2024/11/19 10:23:36 by kbrener-         ###   ########.fr        #
+#    Updated: 2024/11/19 14:51:42 by kbrener-         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME = convert
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 OBJ_DIR = obj/
 SRC = $(wildcard *.cpp)
 OBJS = $(SRC:%.cpp=$(OBJ_DIR)%.o)
