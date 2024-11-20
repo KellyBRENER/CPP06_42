@@ -1,4 +1,4 @@
-/******************************************************************************/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   Serializer.hpp                                     :+:      :+:    :+:   */
@@ -6,9 +6,9 @@
 /*   By: kbrener- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 16:45:21 by kbrener-          #+#    #+#             */
-/*   Updated: 2024/11/19 17:17:53 by kbrener-         ###   ########.fr       */
+/*   Updated: 2024/11/20 11:51:12 by kbrener-         ###   ########.fr       */
 /*                                                                            */
-/******************************************************************************/
+/* ************************************************************************** */
 
 #include <iostream>
 #include <stdint.h>
@@ -26,9 +26,11 @@ struct Data
 class Serializer
 {
 private:
-	Serializer() {}
+	Serializer();
+	Serializer(const Serializer & src);
+	Serializer&	operator=(const Serializer & src);
 public:
-	~Serializer() {}
+	~Serializer();
 	static uintptr_t serialize(Data* ptr);
 	static Data* deserialize(uintptr_t raw);
 };

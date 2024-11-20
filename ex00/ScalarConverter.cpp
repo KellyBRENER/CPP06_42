@@ -6,7 +6,7 @@
 /*   By: kbrener- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:30:54 by kbrener-          #+#    #+#             */
-/*   Updated: 2024/11/20 11:48:02 by kbrener-         ###   ########.fr       */
+/*   Updated: 2024/11/20 11:58:40 by kbrener-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,11 @@
 # include "ScalarConverter.hpp"
 
 ScalarConverter::ScalarConverter() {}
-ScalarConverter::ScalarConverter(const ScalarConverter & src) {}
-ScalarConverter&	ScalarConverter::operator=(const ScalarConverter & src) {}
+ScalarConverter::ScalarConverter(const ScalarConverter & src) {(void)src;}
+ScalarConverter&	ScalarConverter::operator=(const ScalarConverter & src) {
+	(void)src;
+	return *this;
+}
 ScalarConverter::~ScalarConverter() {}
 
 void	ScalarConverter::convert(const std::string & str) {
