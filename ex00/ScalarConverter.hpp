@@ -1,4 +1,4 @@
-/******************************************************************************/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
@@ -6,9 +6,9 @@
 /*   By: kbrener- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 10:26:44 by kbrener-          #+#    #+#             */
-/*   Updated: 2024/11/19 15:58:44 by kbrener-         ###   ########.fr       */
+/*   Updated: 2024/11/20 11:26:26 by kbrener-         ###   ########.fr       */
 /*                                                                            */
-/******************************************************************************/
+/* ************************************************************************** */
 
 #include <iostream>//to print in standard output
 #include <limits>//to access to numeric limits
@@ -24,9 +24,11 @@
 class ScalarConverter
 {
 private:
-	ScalarConverter() {}
+	ScalarConverter();
+	ScalarConverter(const ScalarConverter & src);
+	ScalarConverter&	operator=(const ScalarConverter & src);
 public:
-	~ScalarConverter() {}
+	~ScalarConverter();
 	static void	convert(const std::string & str);
 };
 
